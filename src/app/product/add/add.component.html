@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Thêm mới sản phẩm</h1>
+    <a routerLink="/product/add">Danh sách</a>
+    <form [formGroup]="createForm" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="nameHelp" >
+          <span style="color:red" *ngIf="name && name.errors?.['required'] && name.touched">Chưa nhập trường này</span>
+          <span style="color:red" *ngIf="name && name.errors?.['pattern'] && name.touched">Không được tồn tại số</span>
+          <span style="color:red" *ngIf="name && name.errors?.['minlength'] && name.touched">Tên ít nhất là 5 kí tự</span>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="text" formControlName="price" class="form-control" id="price" aria-describedby="priceHelp" >
+          <span style="color:red" *ngIf="price && price.errors?.['required'] && price.touched">Chưa nhập trường này</span>
+          <span style="color:red" *ngIf="price && price.errors?.['pattern'] && price.touched">Gía không được nhập chữ cái</span>
+        </div>
+        <div class="mb-3">
+          <label for="img" class="form-label">Image</label>
+          <input type="text" formControlName="img" class="form-control" id="img" aria-describedby="imgHelp" >
+        </div>
+        <div class="mb-3">
+          <label for="desc" class="form-label">Desc</label>
+          <input type="text" formControlName="desc" class="form-control" id="desc" aria-describedby="descHelp" >
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="createForm.invalid">Submit</button>
+    </form>
+</div>

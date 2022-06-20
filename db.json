@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "jsonserver update",
+      "desc": "desc",
+      "img": "https://th.bing.com/th/id/R.c124c27ccaf1ce38616f7fdbf813f198?rik=xT31xbsWAZxHmw&pid=ImgRaw&r=0",
+      "price": 1000
+    },
+    {
+      "name": "san pham updated",
+      "desc": "Em không chơi đâu",
+      "img": "https://phunugioi.com/wp-content/uploads/2020/08/anh-cuc-hoa-mi-va-be-gai.jpg",
+      "price": 100000,
+      "id": 2
+    },
+    {
+      "name": "tes ta ",
+      "desc": "Em không chơi đâu",
+      "img": "https://phunugioi.com/wp-content/uploads/2020/08/anh-cuc-hoa-mi-va-be-gai.jpg",
+      "price": 100000,
+      "id": 3
+    }
+  ]
+}
